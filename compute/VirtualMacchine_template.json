@@ -47,6 +47,7 @@
             "type": "string"
         },
         "adminPassword": {
+            "value": "admin@12345678",
             "type": "secureString"
         },
         "diagnosticsStorageAccountName": {
