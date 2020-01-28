@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus2"
+        },
+        "networkInterfaceName": {
+            "value": "teamviewer813"
+        },
+        "networkSecurityGroupName": {
+            "value": "teamviewer-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/d9afadd5-0546-4861-9e17-4392ade8776e/resourceGroups/K8s-POC/providers/Microsoft.Network/virtualNetworks/K8s-POC-vnet"
+        },
+        "publicIpAddressName": {
+            "value": "teamviewer-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "teamviewer"
+        },
+        "virtualMachineRG": {
+            "value": "K8s-POC"
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_D2s_v3"
+        },
+        "adminUsername": {
+            "value": "khadi"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "k8spocdiag"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/d9afadd5-0546-4861-9e17-4392ade8776e/resourceGroups/K8s-POC/providers/Microsoft.Storage/storageAccounts/k8spocdiag"
+        }
+    }
+}
