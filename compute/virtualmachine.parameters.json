@@ -59,7 +59,8 @@
             "value": "khadi"
         },
         "adminPassword": {
-            "value": "admin@12345678"
+            "value": "admin@12345678",
+            "type": "secureString"
         },
         "diagnosticsStorageAccountName": {
             "value": "k8spocdiag"
