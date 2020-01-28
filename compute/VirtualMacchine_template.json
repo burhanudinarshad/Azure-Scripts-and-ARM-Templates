@@ -46,10 +46,6 @@
         "adminUsername": {
             "type": "string"
         },
-        "adminPassword": {
-            "value": "admin@12345678",
-            "type": "string"
-        },
         "diagnosticsStorageAccountName": {
             "type": "string"
         },
@@ -149,7 +145,7 @@
                 "osProfile": {
                     "computerName": "[parameters('virtualMachineName')]",
                     "adminUsername": "[parameters('adminUsername')]",
-                    "adminPassword": "[parameters('adminPassword')]"
+                    "adminPassword": "admin@12345678"
                 },
                 "diagnosticsProfile": {
                     "bootDiagnostics": {
