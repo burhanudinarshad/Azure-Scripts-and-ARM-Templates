@@ -154,7 +154,7 @@
             }
         },
 	     {
-		"name": "Prereqconfig",
+		"name": "[concat(parameters('virtualMachineName'), 'prereqconfig')]",
 		"type": "Microsoft.Compute/virtualMachines/extensions",
 		"location": "[parameters('location')]",
 		"apiVersion": "2019-03-01",
