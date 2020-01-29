@@ -150,7 +150,7 @@
                         "enabled": true,
                         "storageUri": "[concat('https://', parameters('diagnosticsStorageAccountName'), '.blob.core.windows.net/')]"
                     }
-                }
+                },
             "resources": [
                 {
 					"name": "Prereq-config",
