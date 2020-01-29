@@ -156,10 +156,10 @@
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "apiVersion": "2018-06-01",
-            "name": "[concat(variables('vmName'),'/', 'InstallWebServer')]",
+            "name": "[concat(variables('virtualMachineName'),'/', 'InstallPreReq')]",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[concat('Microsoft.Compute/virtualMachines/',variables('vmName'))]"
+                "[concat('Microsoft.Compute/virtualMachines/',variables('virtualMachineName'))]"
             ],
             "properties": {
                 "publisher": "Microsoft.Compute",
