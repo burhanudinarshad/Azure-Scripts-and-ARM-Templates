@@ -152,20 +152,17 @@
                         "storageUri": "[concat('https://', parameters('diagnosticsStorageAccountName'), '.blob.core.windows.net/')]"
                     }
                 }
-            }
-        },
-	     {
-		"name": "[concat(parameters('virtualMachineName'), 'prereqconfig')]",
-		"type": "Microsoft.Compute/virtualMachines/extensions",
-		"location": "[parameters('location')]",
-		"apiVersion": "2019-03-01",
-		"dependsOn": [
+				},
+		"resources":[
+			{
+			"name": "prereqconfig",
+			"type": "extensions",
+			"location": "[parameters('location')]",
+			"apiVersion": "2019-03-01",
+			"dependsOn": [
 			"[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
-		],
-		"tags": {
-		"displayName": "Prereq-config"
-		},
-		"properties": {
+			],
+			"properties": {
 			"publisher": "Microsoft.Azure.Extensions",
 			"type": "CustomScript",
 			"typeHandlerVersion": "2.0",
@@ -177,7 +174,10 @@
 			]  
 						}
 					}
-				}
+			}
+			]
+        },
+		}
     ],
     "outputs": {
         "adminUsername": {
