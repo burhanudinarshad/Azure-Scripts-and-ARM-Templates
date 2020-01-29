@@ -159,7 +159,7 @@
   "location": "[resourceGroup().location]",
   "apiVersion": "2019-03-01",
   "dependsOn": [
-    "[concat('Microsoft.Compute/virtualMachines/', concat(variables('virtualMachineName'),copyindex()))]"
+    "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
   ],
   "tags": {
     "displayName": "Prereq-config"
