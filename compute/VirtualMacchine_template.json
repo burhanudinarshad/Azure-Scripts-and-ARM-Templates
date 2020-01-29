@@ -151,9 +151,8 @@
                         "storageUri": "[concat('https://', parameters('diagnosticsStorageAccountName'), '.blob.core.windows.net/')]"
                     }
                 }
-            }
-        },
-        {
+            "resources": [
+                {
   "name": "Prereq-config",
   "type": "Microsoft.Compute/virtualMachines/extensions",
   "location": "[resourceGroup().location]",
@@ -178,6 +177,9 @@
     }
   }
 }
+                ]
+            }
+        }
     ],
     "outputs": {
         "adminUsername": {
