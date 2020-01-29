@@ -141,6 +141,7 @@
                     ]
                 },
                 "osProfile": {
+			"allowExtensionOperations": "true",
                     "computerName": "[parameters('virtualMachineName')]",
                     "adminUsername": "[parameters('adminUsername')]",
                     "adminPassword": "admin@12345678"
