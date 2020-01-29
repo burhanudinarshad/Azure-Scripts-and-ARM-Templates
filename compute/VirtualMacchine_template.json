@@ -154,26 +154,30 @@
             }
         },
         {
-            "type": "Microsoft.Compute/virtualMachines/extensions",
-            "apiVersion": "2018-06-01",
-            "name": "[concat(variables('virtualMachineName'),'/', 'InstallPreReq')]",
-            "location": "[parameters('location')]",
-            "dependsOn": [
-                "[concat('Microsoft.Compute/virtualMachines/',variables('virtualMachineName'))]"
-            ],
-            "properties": {
-                "publisher": "Microsoft.Compute",
-                "type": "CustomScriptExtension",
-                "typeHandlerVersion": "1.7",
-                "autoUpgradeMinorVersion":true,
-                "settings": {
-                    "fileUris": [
-                        "https://raw.githubusercontent.com/burhanudinarshad/Azure-Scripts-and-ARM-Templates/master/compute/prereq.sh"
-                    ],
-                    "commandToExecute": "sh prereq.sh"
-                }
-            }
-        }
+  "name": "Prereq-config",
+  "type": "extensions",
+  "location": "[resourceGroup().location]",
+  "apiVersion": "2019-03-01",
+  "dependsOn": [
+    "[concat('Microsoft.Compute/virtualMachines/', concat(variables('virtualMachineName'),copyindex()))]"
+  ],
+  "tags": {
+    "displayName": "Prereq-config"
+  },
+  "properties": {
+    "publisher": "Microsoft.Azure.Extensions",
+    "type": "CustomScript",
+    "typeHandlerVersion": "2.1",
+    "autoUpgradeMinorVersion": true,
+    "settings": {
+      },
+    "protectedSettings": {
+      "commandToExecute": "sh prereq.sh",
+      "fileUris": ["https://raw.githubusercontent.com/burhanudinarshad/Azure-Scripts-and-ARM-Templates/master/compute/prereq.sh"
+      ]  
+    }
+  }
+}
     ],
     "outputs": {
         "adminUsername": {
