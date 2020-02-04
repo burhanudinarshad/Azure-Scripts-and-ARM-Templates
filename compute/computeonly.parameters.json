@@ -5,7 +5,7 @@
         "location": {
             "value": "southeastasia"
         },
-        "virtualNetworkId": {
+        "networkInterfaceId": {
             "value": "/subscriptions/d9afadd5-0546-4861-9e17-4392ade8776e/resourceGroups/RG-TeamViewer-POC/providers/Microsoft.Network/networkInterfaces/TV-NIC-POC"
         },
         "virtualMachineName": {
