@@ -86,7 +86,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaceName'))]"
+                            "id": "/subscriptions/d9afadd5-0546-4861-9e17-4392ade8776e/resourceGroups/K8s-POC/providers/Microsoft.Network/networkInterfaces/teamviewer813"
                         }
                     ]
                 },
