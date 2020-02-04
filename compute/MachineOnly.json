@@ -5,28 +5,7 @@
         "location": {
             "type": "string"
         },
-        "networkInterfaceName": {
-            "type": "string"
-        },
-        "networkSecurityGroupName": {
-            "type": "string"
-        },
-        "networkSecurityGroupRules": {
-            "type": "array"
-        },
-        "subnetName": {
-            "type": "string"
-        },
-        "virtualNetworkId": {
-            "type": "string"
-        },
-        "publicIpAddressName": {
-            "type": "string"
-        },
-        "publicIpAddressType": {
-            "type": "string"
-        },
-        "publicIpAddressSku": {
+	"networkInterfaceId": {
             "type": "string"
         },
         "virtualMachineName": {
@@ -83,7 +62,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "/subscriptions/d9afadd5-0546-4861-9e17-4392ade8776e/resourceGroups/K8s-POC/providers/Microsoft.Network/networkInterfaces/teamviewer813"
+                            "id": "[parameters('networkInterfaceId')]"
                         }
                     ]
                 },
