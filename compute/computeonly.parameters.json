@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus2"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/d9afadd5-0546-4861-9e17-4392ade8776e/resourceGroups/K8s-POC/providers/Microsoft.Network/networkInterfaces/teamviewer813"
+        },
+        "virtualMachineName": {
+            "value": "teamviewer"
+        },
+        "virtualMachineRG": {
+            "value": "K8s-POC"
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_D2s_v3"
+        },
+        "adminUsername": {
+            "value": "khadi"
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "k8spocdiag"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/d9afadd5-0546-4861-9e17-4392ade8776e/resourceGroups/K8s-POC/providers/Microsoft.Storage/storageAccounts/k8spocdiag"
+        }
+    }
+}
