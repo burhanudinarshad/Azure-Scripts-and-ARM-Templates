@@ -3,16 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "eastus2"
+            "value": "southeastasia"
         },
         "virtualNetworkId": {
-            "value": "/subscriptions/d9afadd5-0546-4861-9e17-4392ade8776e/resourceGroups/K8s-POC/providers/Microsoft.Network/networkInterfaces/teamviewer813"
+            "value": "/subscriptions/d9afadd5-0546-4861-9e17-4392ade8776e/resourceGroups/RG-TeamViewer-POC/providers/Microsoft.Network/networkInterfaces/TV-NIC-POC"
         },
         "virtualMachineName": {
             "value": "teamviewer"
         },
         "virtualMachineRG": {
-            "value": "K8s-POC"
+            "value": "RG-TeamViewer-POC"
         },
         "osDiskType": {
             "value": "Premium_LRS"
